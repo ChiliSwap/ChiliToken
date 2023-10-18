@@ -1,19 +1,27 @@
-## Foundry
+## ChiliSwap Token Contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+- [ChiliSwap Token Contract](#chiliswap-token-contract)
+- [Deployed Addresses](#deployed-addresses)
+  - [Scroll Mainnet](#scroll-mainnet)
+- [Development](#development)
+  - [Build](#build)
+  - [Test](#test)
+  - [Format](#format)
+  - [Gas Snapshots](#gas-snapshots)
+  - [Anvil](#anvil)
+  - [Deploy](#deploy)
 
-Foundry consists of:
+## Deployed Addresses 
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+### Scroll Mainnet 
 
-## Documentation
+- [Token Implementation](https://scrollscan.com/address/0xfc599bfc4e32757552a053d1bd9b3d35bc47124f#code)  
+- [Transparent Proxy](https://scrollscan.com/address/0x4393cc09be8a87953a3db5265951d71a3e21366d#code)  
+- [ProxyAdmin](https://scrollscan.com/address/0xd2f7296a079237044961ce5c94e52a2c23fa82bf#code)   
 
-https://book.getfoundry.sh/
+> Note: When `safe.global` is online, the owner of the `proxyAdmin`  & the admin will be transferred to a safe. 
 
-## Usage
+## Development
 
 ### Build
 
@@ -48,19 +56,5 @@ $ anvil
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+$ forge script script/Deploy.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
