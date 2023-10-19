@@ -16,7 +16,7 @@ contract Deploy is Script {
 
         address token = address(new ChiliTokenNonUpgradable(admin));
 
-        
+        console2.log("token address: ", token);
     
         vm.stopBroadcast();
     }
