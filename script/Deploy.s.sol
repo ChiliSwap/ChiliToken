@@ -14,6 +14,8 @@ contract Deploy is Script {
 
         address admin = vm.envAddress("ADMIN_ADDRESS");
 
+        require(admin != address(0), "ADMIN_ADDRESS is not set");
+
         address token = address(new ChiliTokenNonUpgradable(admin));
 
         console2.log("token address: ", token);
